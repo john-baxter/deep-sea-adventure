@@ -1,2 +1,2 @@
 def dice_roll():
-  return 0
+  return 2
