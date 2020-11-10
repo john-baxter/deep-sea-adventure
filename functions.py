@@ -1,2 +1,7 @@
+from random import randint
+
 def dice_roll():
-  return 2
+  dice_roll = randint(2, 6)
+  return dice_roll
+
+
