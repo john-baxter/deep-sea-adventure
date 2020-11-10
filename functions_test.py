@@ -1,11 +1,6 @@
 import unittest
-# from unittest import mock
 from unittest.mock import patch, call
 from functions import roll_dice
-
-# class SetupTest(unittest.TestCase):
-#   def test_setup(self):
-#     pass
 
 class DiceRollTest(unittest.TestCase):
   def test_roll_dice_returns_int(self):
