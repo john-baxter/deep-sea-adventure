@@ -16,12 +16,10 @@ class DiceRollTest(unittest.TestCase):
   @patch('functions.randint', side_effect = [2, 3])
   def test_roll_dice_calls_random_int_generator(self, mock_random_int):
     roll_dice()
-
     expected_mock_calls = [
       call(1, 3),
       call(1, 3),
       ]
-
     self.assertEqual(mock_random_int.mock_calls, expected_mock_calls)
     self.assertEqual(mock_random_int.call_count, 2)
 
