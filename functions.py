@@ -27,4 +27,4 @@ def roll_dice(dice=2, sides=3):
   return dice_roll
 
 def initialise_trail(length):
-  return [None for i in range(length)]
+  return [i for i in range(length)]

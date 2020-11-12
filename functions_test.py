@@ -45,7 +45,14 @@ class InitialiseTrailTest(unittest.TestCase):
     actual_result = len(test_trail)
     self.assertEqual(actual_result, expected_result)
 
-  
+  def test_initialise_trail_creates_list_of_increasing_integers_each_element_has_same_value_as_idx(
+    self):
+    given_length = 7
+    expected_trail = [0,1,2,3,4,5,6]
+    actual_trail = initialise_trail(given_length)
+
+    self.assertEqual(actual_trail, expected_trail)
+
 
 
 if __name__ == '__main__':
