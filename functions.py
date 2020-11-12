@@ -27,5 +27,19 @@ def roll_dice(dice=2, sides=3):
   return dice_roll
 
 def initialise_trail(length):
+  """Prepares the trail for this game
+
+  Parameters
+  ----------
+  length : (int)
+    The number of elements expected to be in the trail
+
+  Returns
+  -------
+  trail : (list)
+    The trail being used for this game.
+    Each element is an int
+    Each element has the same value as its idx
+  """
   trail = list(range(length)) 
   return trail

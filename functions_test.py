@@ -53,7 +53,9 @@ class InitialiseTrailTest(unittest.TestCase):
 
     self.assertEqual(actual_trail, expected_trail)
 
-
+class ExchangeTrailElementWithBlankTest(unittest.TestCase):
+  def test_(self):
+    pass
 
 if __name__ == '__main__':
   unittest.main(verbosity = 2)
