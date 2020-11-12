@@ -25,3 +25,6 @@ def roll_dice(dice=2, sides=3):
   for i in range(dice):
     dice_roll += randint(1, sides)
   return dice_roll
+
+def initialise_trail():
+  return []

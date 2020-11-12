@@ -1,6 +1,8 @@
 import unittest
 from unittest.mock import patch, call
 from functions import roll_dice
+from functions import initialise_trail
+# from functions import 
 
 class DiceRollTest(unittest.TestCase):
   def test_roll_dice_returns_int(self):
@@ -22,6 +24,12 @@ class DiceRollTest(unittest.TestCase):
       ]
     self.assertEqual(mock_random_int.mock_calls, expected_mock_calls)
     self.assertEqual(mock_random_int.call_count, 2)
+
+class InitialiseTrailTest(unittest.TestCase):
+  def test_initialise_trail_creates_a_list(self):
+    expected_result = list
+    actual_result = initialise_trail()
+    self.assertIsInstance(actual_result, expected_result)
 
 if __name__ == '__main__':
   unittest.main(verbosity = 2)
