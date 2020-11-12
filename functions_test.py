@@ -38,5 +38,15 @@ class InitialiseTrailTest(unittest.TestCase):
     actual_result = len(test_trail)
     self.assertEqual(actual_result, expected_result)
 
+  def test_initialise_trail_creates_list_with_given_length_of_nine_elements(self):
+    given_length = 9
+    expected_result = 9
+    test_trail = initialise_trail(given_length)
+    actual_result = len(test_trail)
+    self.assertEqual(actual_result, expected_result)
+
+  
+
+
 if __name__ == '__main__':
   unittest.main(verbosity = 2)
