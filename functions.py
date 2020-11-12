@@ -50,4 +50,5 @@ def initialise_trail(tokens):
   return trail
 
 def exchange_trail_token_for_blank(trail, player_position):
-  return [0, "X"]
+  trail[player_position] = "X"
+  return trail

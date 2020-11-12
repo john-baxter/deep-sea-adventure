@@ -57,11 +57,18 @@ class ExchangeTrailElementWithBlankTest(unittest.TestCase):
   def test_can_exchange_single_trail_token_with_blank(self):
     trail = [0,1]
     position_to_exchange = 1
-
     expected_new_trail = [0, "X"]
     actual_new_trail = exchange_trail_token_for_blank(trail, position_to_exchange)
-
     self.assertEqual(actual_new_trail, expected_new_trail)
+
+  def test_can_exchange_element_2_of_two_token_trail_with_blank(self):
+    trail = [0,1,1]
+    position_to_exchange = 2
+    expected_new_trail = [0, 1, "X"]
+    actual_new_trail = exchange_trail_token_for_blank(trail, position_to_exchange)
+    self.assertEqual(actual_new_trail, expected_new_trail)
+
+  
 
 
 if __name__ == '__main__':
