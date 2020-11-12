@@ -31,31 +31,31 @@ class InitialiseTrailTest(unittest.TestCase):
     actual_result = initialise_trail(0)
     self.assertIsInstance(actual_result, expected_result)
 
-  def test_initialise_trail_creates_list_with_given_length_of_five_elements(self):
-    given_length = 5
-    expected_result = 5
-    test_trail = initialise_trail(given_length)
+  def test_initialise_trail_creates_list_with_length_six_given_five_tokens(self):
+    given_tokens = 5
+    expected_result = 6
+    test_trail = initialise_trail(given_tokens)
     actual_result = len(test_trail)
     self.assertEqual(actual_result, expected_result)
 
-  def test_initialise_trail_creates_list_with_given_length_of_nine_elements(self):
-    given_length = 9
-    expected_result = 9
-    test_trail = initialise_trail(given_length)
+  def test_initialise_trail_creates_list_with_length_ten_given_nine_tokens(self):
+    given_tokens = 9
+    expected_result = 10
+    test_trail = initialise_trail(given_tokens)
     actual_result = len(test_trail)
     self.assertEqual(actual_result, expected_result)
 
   def test_initialise_trail_creates_list_of_increasing_integers_each_element_has_same_value_as_idx(
     self):
-    given_length = 7
-    expected_trail = [0,1,2,3,4,5,6]
-    actual_trail = initialise_trail(given_length)
-
+    given_tokens = 7
+    expected_trail = [0,1,2,3,4,5,6,7]
+    actual_trail = initialise_trail(given_tokens)
     self.assertEqual(actual_trail, expected_trail)
 
 class ExchangeTrailElementWithBlankTest(unittest.TestCase):
-  def test_(self):
-    pass
+  def test_can_exchange_single_trail_element_with_blank(self):
+    trail = [0]
+
 
 if __name__ == '__main__':
   unittest.main(verbosity = 2)

@@ -14,7 +14,7 @@ def roll_dice(dice=2, sides=3):
 
   sides : (int)
   default value : 3
-    the 'size' of the dice being rolled - how many sides does it have.
+    the 'size' of the dice being rolled - how many sides do they have.
 
   Returns
   -------
@@ -26,13 +26,17 @@ def roll_dice(dice=2, sides=3):
     dice_roll += randint(1, sides)
   return dice_roll
 
-def initialise_trail(length):
+def initialise_trail(tokens):
   """Prepares the trail for this game
+
+  Element 0 of the resulting list will not be considered as 'part of the trail', 
+  the intention is to treat this differently as it will form the location of the 
+  submarine and therefore care will be taken not to modify this element at any time.
 
   Parameters
   ----------
-  length : (int)
-    The number of elements expected to be in the trail
+  tokens : (int)
+    The number of tokens expected to be in the trail
 
   Returns
   -------
@@ -41,5 +45,6 @@ def initialise_trail(length):
     Each element is an int
     Each element has the same value as its idx
   """
+  length = tokens+1
   trail = list(range(length)) 
   return trail
