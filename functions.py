@@ -75,5 +75,13 @@ def exchange_trail_token_for_blank(trail, player_position):
   return trail
 
 def initialise_player_hand():
+  """Creates a place for the player to store tokens that are collected during the game
+
+  Returns
+  -------
+  player_hand : (list)
+    An empty list.
+    Will have tokens from the trail added during the game.
+  """
   player_hand = []
   return player_hand
