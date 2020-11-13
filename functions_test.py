@@ -112,12 +112,20 @@ class AddTokenToHandTest(unittest.TestCase):
     self.assertEqual(actual_new_hand, expected_new_hand)
 
 class MovePlayerAlongTrailTest(unittest.TestCase):
-  def test_player_position_is_increased_when_player_moves_along_trail(self):
+  def test_player_position_is_0_increased_to_2_when_dice_roll_is_2(self):
     player_position = 0
     dice_roll = 2
     expected_new_position = 2
     actual_new_position = move_player_along_trail(player_position, dice_roll)
     self.assertEqual(actual_new_position, expected_new_position)
+
+  def test_player_position_is_3_increased_to_5_when_dice_roll_is_2(self):
+    player_position = 3
+    dice_roll = 2
+    expected_new_position = 5
+    actual_new_position = move_player_along_trail(player_position, dice_roll)
+    self.assertEqual(actual_new_position, expected_new_position)
+
 
 if __name__ == '__main__':
   unittest.main(verbosity = 2)

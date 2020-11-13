@@ -110,4 +110,5 @@ def add_token_to_hand(player_hand, token_to_be_added):
   return player_hand
 
 def move_player_along_trail(player_position, dice_roll):
-  return 2
+  player_position += dice_roll
+  return player_position
