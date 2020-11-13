@@ -5,6 +5,7 @@ from functions import initialise_trail
 from functions import exchange_trail_token_for_blank
 from functions import initialise_player_hand
 from functions import add_token_to_hand
+from functions import move_player_along_trail
 # from functions import 
 
 class DiceRollTest(unittest.TestCase):
@@ -109,6 +110,14 @@ class AddTokenToHandTest(unittest.TestCase):
     expected_new_hand = [3,9]
     actual_new_hand = add_token_to_hand(initial_hand, token_being_added)
     self.assertEqual(actual_new_hand, expected_new_hand)
+
+class MovePlayerAlongTrailTest(unittest.TestCase):
+  def test_player_position_is_increased_when_player_moves_along_trail(self):
+    player_position = 0
+    dice_roll = 2
+    expected_new_position = 2
+    actual_new_position = move_player_along_trail(player_position, dice_roll)
+    self.assertEqual(actual_new_position, expected_new_position)
 
 if __name__ == '__main__':
   unittest.main(verbosity = 2)
