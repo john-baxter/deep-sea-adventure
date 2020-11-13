@@ -3,6 +3,7 @@ from unittest.mock import patch, call
 from functions import roll_dice
 from functions import initialise_trail
 from functions import exchange_trail_token_for_blank
+from functions import initialise_player_hand
 # from functions import 
 
 class DiceRollTest(unittest.TestCase):
@@ -75,6 +76,11 @@ class ExchangeTrailElementWithBlankTest(unittest.TestCase):
     actual_new_trail = exchange_trail_token_for_blank(trail, position_to_exchange)
     self.assertEqual(actual_new_trail, expected_new_trail)
     
+class InitialisePlayerHandTest(unittest.TestCase):
+  def test_initialise_player_hand_returns_empty_list(self):
+    expected_result = []
+    actual_result = initialise_player_hand()
+    self.assertEqual(actual_result, expected_result)
 
 
 if __name__ == '__main__':

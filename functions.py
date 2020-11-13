@@ -73,3 +73,7 @@ def exchange_trail_token_for_blank(trail, player_position):
   if player_position >= 1:
     trail[player_position] = "X"
   return trail
+
+def initialise_player_hand():
+  player_hand = []
+  return player_hand
