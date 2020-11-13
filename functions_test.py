@@ -103,6 +103,12 @@ class AddTokenToHandTest(unittest.TestCase):
     actual_new_hand = add_token_to_hand(initial_hand, token_being_added)
     self.assertEqual(actual_new_hand, expected_new_hand)
 
+  def test_check_hand_is_not_empty_can_add_more(self):
+    initial_hand = [3]
+    token_being_added = 9
+    expected_new_hand = [3,9]
+    actual_new_hand = add_token_to_hand(initial_hand, token_being_added)
+    self.assertEqual(actual_new_hand, expected_new_hand)
 
 
 if __name__ == '__main__':
