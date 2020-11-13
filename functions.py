@@ -50,6 +50,26 @@ def initialise_trail(tokens):
   return trail
 
 def exchange_trail_token_for_blank(trail, player_position):
+  """Removes the token under the player from the trail and replaces with a blank
+
+  Does not replace element 0 as this will be the position of the submarine and is not 
+  considered as part of the trail.
+
+  Parameters
+  ----------
+  trail : (list)
+    The trail being used for this game.
+    Each element is an int
+    Each element has the same value as its idx
+
+  player_position : (int)
+    The location of the current player on the trail
+
+  Returns
+  -------
+  trail : (list)
+    The newly updated trail with one fewer regular token and a blank token in that place.
+  """
   if player_position >= 1:
     trail[player_position] = "X"
   return trail
