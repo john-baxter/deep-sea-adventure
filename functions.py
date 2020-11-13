@@ -109,6 +109,9 @@ def add_token_to_hand(player_hand, token_to_be_added):
   player_hand.append(token_to_be_added)
   return player_hand
 
-def move_player_along_trail(player_position, dice_roll):
-  player_position += dice_roll
+def move_player_along_trail(player_position, dice_roll, trail):
+  if player_position + dice_roll >= len(trail):
+    player_position = len(trail)-1
+  else:
+    player_position += dice_roll
   return player_position

@@ -113,18 +113,29 @@ class AddTokenToHandTest(unittest.TestCase):
 
 class MovePlayerAlongTrailTest(unittest.TestCase):
   def test_player_position_is_0_increased_to_2_when_dice_roll_is_2(self):
+    trail = [0,1,2,3,4,5,6,7,8,9]
     player_position = 0
     dice_roll = 2
     expected_new_position = 2
-    actual_new_position = move_player_along_trail(player_position, dice_roll)
+    actual_new_position = move_player_along_trail(player_position, dice_roll, trail)
     self.assertEqual(actual_new_position, expected_new_position)
 
   def test_player_position_is_3_increased_to_5_when_dice_roll_is_2(self):
+    trail = [0,1,2,3,4,5,6,7,8,9]
     player_position = 3
     dice_roll = 2
     expected_new_position = 5
-    actual_new_position = move_player_along_trail(player_position, dice_roll)
+    actual_new_position = move_player_along_trail(player_position, dice_roll, trail)
     self.assertEqual(actual_new_position, expected_new_position)
+
+  def test_player_stops_on_last_spot_if_roll_is_higher_than_the_number_of_tokens_left(self):
+    trail = [0,1,2,3,4,5,6,7,8,9]
+    player_position = 7
+    dice_roll = 4
+    expected_new_position = 9
+    actual_new_position = move_player_along_trail(player_position, dice_roll, trail)
+    self.assertEqual(actual_new_position, expected_new_position)
+
 
 
 if __name__ == '__main__':
