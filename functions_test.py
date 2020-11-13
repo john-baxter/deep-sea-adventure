@@ -86,8 +86,15 @@ class InitialisePlayerHandTest(unittest.TestCase):
 class AddTokenToHandTest(unittest.TestCase):
   def test_add_token_to_hand_returns_list(self):
     expected_result = list
-    actual_result = add_token_to_hand()
+    actual_result = add_token_to_hand([], 0)
     self.assertIsInstance(actual_result, expected_result)
+
+  def test_hand_is_empty_can_add_one_token(self):
+    initial_hand = []
+    token_being_added = 3
+    expected_new_hand = [3]
+    actual_new_hand = add_token_to_hand(initial_hand, token_being_added)
+    self.assertEqual(actual_new_hand, expected_new_hand)
 
 if __name__ == '__main__':
   unittest.main(verbosity = 2)

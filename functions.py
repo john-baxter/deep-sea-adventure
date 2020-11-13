@@ -86,5 +86,5 @@ def initialise_player_hand():
   player_hand = []
   return player_hand
 
-def add_token_to_hand():
-  return []
+def add_token_to_hand(player_hand, token_to_be_added):
+  return [3]
