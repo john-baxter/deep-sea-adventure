@@ -89,12 +89,21 @@ class AddTokenToHandTest(unittest.TestCase):
     actual_result = add_token_to_hand([], 0)
     self.assertIsInstance(actual_result, expected_result)
 
-  def test_hand_is_empty_can_add_one_token(self):
+  def test_hand_is_empty_can_add_one_3_token(self):
     initial_hand = []
     token_being_added = 3
     expected_new_hand = [3]
     actual_new_hand = add_token_to_hand(initial_hand, token_being_added)
     self.assertEqual(actual_new_hand, expected_new_hand)
+
+  def test_hand_is_empty_can_add_one_9_token(self):
+    initial_hand = []
+    token_being_added = 9
+    expected_new_hand = [9]
+    actual_new_hand = add_token_to_hand(initial_hand, token_being_added)
+    self.assertEqual(actual_new_hand, expected_new_hand)
+
+
 
 if __name__ == '__main__':
   unittest.main(verbosity = 2)
