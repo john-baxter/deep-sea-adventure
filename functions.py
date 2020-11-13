@@ -110,6 +110,26 @@ def add_token_to_hand(player_hand, token_to_be_added):
   return player_hand
 
 def move_player_along_trail(player_position, dice_roll, trail):
+  """Moves the player along the trail to the new location as defined by the dice
+
+  Parameters
+  ----------
+  player_position : (int)
+    The idx of the trail element where the player is currently located.
+
+  dice_roll : (int)
+    The score the player achieved this turn when rolling the game dice
+
+  trail : (list)
+    The trail being used for this game.
+    Each element is an int
+    Each element has the same value as its idx
+
+  Returns
+  -------
+  player_position : (int)
+    The newly updated idx of the trail element where the player is now located.
+  """
   if player_position + dice_roll >= len(trail):
     player_position = len(trail)-1
   else:
