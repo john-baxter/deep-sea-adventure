@@ -4,6 +4,7 @@ from functions import roll_dice
 from functions import initialise_trail
 from functions import exchange_trail_token_for_blank
 from functions import initialise_player_hand
+from functions import add_token_to_hand
 # from functions import 
 
 class DiceRollTest(unittest.TestCase):
@@ -82,6 +83,11 @@ class InitialisePlayerHandTest(unittest.TestCase):
     actual_result = initialise_player_hand()
     self.assertEqual(actual_result, expected_result)
 
+class AddTokenToHandTest(unittest.TestCase):
+  def test_add_token_to_hand_returns_list(self):
+    expected_result = list
+    actual_result = add_token_to_hand()
+    self.assertIsInstance(actual_result, expected_result)
 
 if __name__ == '__main__':
   unittest.main(verbosity = 2)

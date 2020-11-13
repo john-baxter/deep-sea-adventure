@@ -85,3 +85,6 @@ def initialise_player_hand():
   """
   player_hand = []
   return player_hand
+
+def add_token_to_hand():
+  return []
