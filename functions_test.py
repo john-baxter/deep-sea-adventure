@@ -110,6 +110,5 @@ class AddTokenToHandTest(unittest.TestCase):
     actual_new_hand = add_token_to_hand(initial_hand, token_being_added)
     self.assertEqual(actual_new_hand, expected_new_hand)
 
-
 if __name__ == '__main__':
   unittest.main(verbosity = 2)

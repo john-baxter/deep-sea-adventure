@@ -87,5 +87,24 @@ def initialise_player_hand():
   return player_hand
 
 def add_token_to_hand(player_hand, token_to_be_added):
+  """Add a token into the player's hand
+
+  Parameters
+  ----------
+  player_hand : (list)
+    A list containing any/all tokens collected by the player so far this game.
+    Could be empty.
+    Elements are trail tokens.
+
+  token_to_be_added : (int)
+    The token being added to the player's hand
+
+  Returns
+  -------
+  player_hand : (list)
+    A list containing any/all tokens collected by the player so far this game.
+    Newly updated with the extra token added.
+    Elements are trail tokens.
+  """
   player_hand.append(token_to_be_added)
   return player_hand
